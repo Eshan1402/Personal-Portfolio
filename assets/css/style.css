@@ -3008,8 +3008,8 @@ hr {
   }
 }
 .cs_hero.cs_style_2 .cs_hero_image_box {
-  width: 606px;
-  height: 838px;
+  max-width: 606px;
+  width: 100%;
   background-position: top center;
   text-align: center;
   top: 100px;
@@ -3021,8 +3021,7 @@ hr {
   .cs_hero.cs_style_2 .cs_hero_image_box {
     top: 70px;
     left: 56%;
-    width: 500px;
-    height: 690px;
+    max-width: 500px;
   }
 }
 @media (max-width: 1199px) {
@@ -3047,8 +3046,8 @@ hr {
 @media (max-width: 575px) {
   .cs_hero.cs_style_2 .cs_hero_image_box {
     width: 100%;
-    height: initial;
-    padding-bottom: 140%;
+    height: auto;
+    padding-bottom: 0;
   }
 }
 .cs_hero.cs_style_2 .cs_hero_image_box .cs_imagebox_img {
