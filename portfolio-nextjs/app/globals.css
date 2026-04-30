@@ -2,28 +2,32 @@
 
 /* ── Design Tokens ── */
 :root {
-  --bg: #0d0d1a;
-  --bg-2: #12122a;
-  --bg-card: rgba(255,255,255,0.04);
-  --border: rgba(255,255,255,0.08);
-  --text: #e8e8f0;
-  --text-muted: #8888aa;
-  --accent: #7c3aed;
-  --accent-2: #a855f7;
-  --accent-glow: rgba(124, 58, 237, 0.4);
-  --gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%);
+  /* Dark mode — deep dusty slate with pastel accents */
+  --bg: #1a1a20;
+  --bg-2: #22222c;
+  --bg-card: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.09);
+  --text: #f0ece8;
+  --text-muted: #a09890;
+  --accent: #c9a0a0;       /* dusty rose */
+  --accent-2: #9db8a8;     /* sage green */
+  --accent-glow: rgba(201, 160, 160, 0.35);
+  --gradient: linear-gradient(135deg, #c9a0a0 0%, #b8a0c4 45%, #9db8a8 100%);
+  --font-display: 'Cormorant Garamond', 'Playfair Display', serif;
 }
 
 [data-theme="light"] {
-  --bg: #f8f7ff;
-  --bg-2: #eeeeff;
+  /* Light mode — warm ivory with dusty rose & sage */
+  --bg: #faf8f5;
+  --bg-2: #f2ede8;
   --bg-card: rgba(0,0,0,0.03);
   --border: rgba(0,0,0,0.08);
-  --text: #12103e;
-  --text-muted: #6666aa;
-  --accent: #7c3aed;
-  --accent-2: #a855f7;
-  --accent-glow: rgba(124, 58, 237, 0.2);
+  --text: #2c2420;
+  --text-muted: #7a6e68;
+  --accent: #b87878;       /* deeper dusty rose */
+  --accent-2: #7a9e8a;     /* deeper sage */
+  --accent-glow: rgba(184, 120, 120, 0.2);
+  --gradient: linear-gradient(135deg, #b87878 0%, #a890b8 45%, #7a9e8a 100%);
 }
 
 /* ── Base ── */
@@ -34,10 +38,15 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', 'Space Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display), 'Cormorant Garamond', 'Playfair Display', serif;
+  letter-spacing: -0.01em;
 }
 
 /* ── Scrollbar ── */
@@ -126,9 +135,9 @@ body::before {
 .mesh-bg {
   background-color: var(--bg);
   background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(168, 85, 247, 0.10) 0%, transparent 50%),
-    radial-gradient(ellipse at 60% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(201, 160, 160, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(184, 160, 196, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(157, 184, 168, 0.09) 0%, transparent 50%);
 }
 
 /* ── Section spacing ── */
@@ -167,7 +176,7 @@ body::before {
 }
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(124,58,237,0.2);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 0 0 1px rgba(201,160,160,0.25);
 }
 
 /* ── Form inputs ── */
@@ -225,7 +234,7 @@ body::before {
 }
 .btn-outline:hover {
   border-color: var(--accent);
-  background: rgba(124, 58, 237, 0.08);
+  background: rgba(201, 160, 160, 0.10);
   transform: translateY(-2px);
 }
 
@@ -233,8 +242,8 @@ body::before {
 .tag {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background: rgba(124, 58, 237, 0.15);
-  border: 1px solid rgba(124, 58, 237, 0.3);
+  background: rgba(201, 160, 160, 0.12);
+  border: 1px solid rgba(201, 160, 160, 0.28);
   border-radius: 99px;
   font-size: 0.75rem;
   font-weight: 500;

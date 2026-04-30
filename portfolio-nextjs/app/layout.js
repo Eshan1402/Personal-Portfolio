@@ -1,8 +1,13 @@
-import { Geist, Space_Grotesk } from 'next/font/google';
+import { Geist, Cormorant_Garamond } from 'next/font/google';
 import './globals.css';
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' });
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+});
 
 export const metadata = {
   title: 'Eshan Saxena — Full Stack Developer & CS Engineer',
@@ -54,7 +59,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`${geist.variable} ${spaceGrotesk.variable}`}>
+      <body className={`${geist.variable} ${cormorant.variable}`}>
         {children}
       </body>
     </html>
